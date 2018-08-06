@@ -1,12 +1,12 @@
-package org.launchcode;
+package io.github.DeniseTims.capstone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductMvcApplication {
+public class CapstoneApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductMvcApplication.class, args);
+		SpringApplication.run(CapstoneApplication.class, args);
 	}
 }
