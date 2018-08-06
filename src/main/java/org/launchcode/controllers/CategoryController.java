@@ -30,7 +30,7 @@ public class CategoryController {
         return "category/index";
     }
 
-    // Request path: /cheese
+    // Request path: /Product
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String add(Model model) {
         model.addAttribute("title", "Add Category");

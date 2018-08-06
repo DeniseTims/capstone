@@ -7,7 +7,6 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-
 	}
 }
 
@@ -16,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'cheese-mvc-data'
+	baseName = 'product-mvc'
 	version = '0.0.1-SNAPSHOT'
 }
 

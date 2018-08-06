@@ -7,12 +7,12 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <ul>
-    <li th:each="cheese : ${cheeses}" th:text="${cheese.name}"></li>
+    <li th:each="product : ${products}" th:text="${product.name}"></li>
 </ul>
 
-<p th:unless="${cheeses.size()}"><i> cheeses yet</i></p>
+<p th:unless="${products.size()}"><i> products yet</i></p>
 
-<p><a th:href="'/menu/add-item/' + ${menuId}">Add Cheese</a></p>
+<p><a th:href="'/menu/add-item/' + ${menuId}">Add Product</a></p>
 
 </body>
 </html>

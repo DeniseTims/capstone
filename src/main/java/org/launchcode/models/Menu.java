@@ -21,13 +21,13 @@ public class Menu {
     private String name;
 
     @ManyToMany
-    private List<Cheese> cheeses;
+    private List<Product> products;
 
     public Menu() { }
 
     public Menu(String name) { this.name = name; }
 
-    public void addItem(Cheese item) { cheeses.add(item); }
+    public void addItem(Product item) { products.add(item); }
 
     public int getId() { return id; }
 
@@ -35,5 +35,5 @@ public class Menu {
 
     public void setName(String name) { this.name = name; }
 
-    public List<Cheese> getCheeses() { return cheeses;}
+    public List<Product> getProducts() { return products;}
 }
