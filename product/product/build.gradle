@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.4.RELEASE'
+		springBootVersion = '1.5.2.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -13,10 +13,17 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
+<<<<<<< HEAD:product/product/build.gradle
 group = 'org.launchcode'
 version = '0.0.1-SNAPSHOT'
+=======
+jar {
+	baseName = 'product-mvc'
+	version = '0.0.1-SNAPSHOT'
+}
+
+>>>>>>> a79dfb31df9f4ee568fa07bc95878fbc50244285:build.gradle
 sourceCompatibility = 1.8
 
 repositories {
@@ -25,10 +32,14 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('mysql:mysql-connector-java')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+bootRun {
+	addResources = true
 }
