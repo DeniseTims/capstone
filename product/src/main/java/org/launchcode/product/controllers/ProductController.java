@@ -56,9 +56,9 @@ public class ProductController {
             return "product/add";
         }
 
-        Category cat = categoryDao.findOne(categoryId);
+//        Category cat = categoryDao.findOne(categoryId);
 
-        newProduct.setCategory(cat);
+//        newProduct.setCategory(cat);
 
         productDao.save(newProduct);
         return "redirect:";
@@ -75,7 +75,7 @@ public class ProductController {
     public String processRemoveProductForm(@RequestParam int[] productIds) {
 
         for (int productId : productIds) {
-            productDao.delete(productId);
+//            productDao.delete(productId);
         }
 
         return "redirect:";
